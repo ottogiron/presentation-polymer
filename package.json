@@ -2,6 +2,12 @@
   "name": "presentation-web-components-polymer",
   "version": "0.0.0",
   "dependencies": {
+    "bespoke-theme-fancy": "^0.3.1",
+    "bespoke-theme-greeny": "0.0.4",
+    "bespoke-theme-nebula": "^1.0.1",
+    "bespoke-theme-simple-slide": "^0.1.0",
+    "bespoke-theme-terminal": "^1.0.1",
+    "bespoke-theme-tweakable": "^1.0.1",
     "bespoke-theme-voltaire": "^1.0.1"
   },
   "devDependencies": {
