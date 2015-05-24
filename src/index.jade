@@ -6,13 +6,21 @@ html
     title Web Components - Polymer
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
-
+    script(src="bower_components/webcomponentsjs/webcomponents.js")
+    link(rel="import" href="bower_components/polymer/polymer.html")
+    link(rel="import" href="bower_components/core-elements/core-elements.html")
+    link(rel="import" href="bower_components/paper-elements/paper-elements.html")
   body
 
     article
 
       section
         h2 Únete a la Revolución de Web Components con Polymer
+        paper-tabs
+          paper-tab Tab 1
+          paper-tab Tab 2
+          paper-tab Tab 3
+        paper-checkbox click aqui
 
       section
         h2 Agenda
