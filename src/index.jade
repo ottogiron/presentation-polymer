@@ -22,7 +22,7 @@ html
         h3 Agenda
         ul
           li Introducción 
-          li Que resuelve Web Componentns y Polymer
+          li ¿Que resuelve Web Components y Polymer?
           li Polymer Demo
 
       section
@@ -45,7 +45,7 @@ html
         ul 
           li Polyfills "webcomponentsjs"
           li "Azucar sintactica"
-          li UI framework "Paper elements" 
+          li UI/Utility framework Core Elements y Paper elements
 
       section      
         h2 Un poco de historia...
@@ -100,8 +100,18 @@ html
         li Ninguna forma de agrupar dependencias
         li Falta de estandares
 
+
+
       section
-        h2 Como Web Components y Polymer resuelven estos problemas...
+        h2 ¿Como Web Components y Polymer resuelven estos problemas...?
+
+      section 
+        h3 Web Components(2)
+        ul
+          li Custom elements
+          li HTML imports
+          li Templates
+          li Shadow DOM
 
       section 
         h3 HTML no es descriptivo
@@ -162,8 +172,14 @@ html
                extends: 'button'
             });
 
+      section Polymer
+        code.language-markup.
+          &lt;polymer-element name=&quot;super-button&quot; extends=&quot;button&quot;&gt;
+            .....
+          &lt;/polymer-element&gt;
+
       section
-        h3 Polymer
+        h3 Uso
         pre
           code.language-markup.
             &lt;button is=&quot;super-button&quot;&gt;&lt;/button&gt;
@@ -199,6 +215,7 @@ html
           li Parseadas, no renderizadas.
           li El contenido esta inerte hasta que es clonado/usado.
           li No se toma como parte de la pagina.
+
 
      
       section
@@ -284,11 +301,11 @@ html
       section
         h3 HTML Imports(3)
         ul 
-          li Agrupar JS/HTML/CSS -> unica user-list
+          li Agrupar JS/HTML/CSS 
           li Manejo de dependencias basico
 
       section
-        h3 Web Components y Polymer
+        h3  Polymer y HTML Imports
         pre
           code.language-markup.
             &lt;link rel=&quot;import&quot; href=&quot;polymer.html&quot;&gt;
@@ -307,12 +324,13 @@ html
         pre
           code.language-markup.
             &lt;link rel=&quot;import&quot; href=&quot;menu-bar.html&quot;&gt;
+            &lt;menu-bar&gt;&lt;/menu-bar&gt;
     
       section
-        h2 Pensando en componentes
+        h2 ¿Que más ofrece polymer?
 
       section
-        h3 Polymer Core Elementos no Visuales
+        h3 Polymer Core Elements (No visuales)
         h4 Data/Services
         pre
           code.language-markup.
@@ -320,7 +338,7 @@ html
             &lt;core-ajax&gt;
 
       section
-        h3 Polymer Core Elementos no Visuales
+        h3 Polymer Core Elements (No visuales)
         h4 Input/Selection
         pre
           code.language-markup.
@@ -330,7 +348,7 @@ html
             &lt;core-input&gt;
 
       section
-        h3 Polymer Paper Elements - Visuales 
+        h3 Polymer Paper Elements
         paper-button(raised) Soy un boton
           core-icon(icon="favorite" )
         paper-input(value="Soy un Input")
