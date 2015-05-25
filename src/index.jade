@@ -10,6 +10,7 @@ html
     link(rel="import" href="bower_components/polymer/polymer.html")
     link(rel="import" href="bower_components/core-elements/core-elements.html")
     link(rel="import" href="bower_components/paper-elements/paper-elements.html")
+    link(rel="import" href="bower_components/google-map/google-map.html") 
   body
 
     article
@@ -278,7 +279,7 @@ html
           ul 
             li Buscar.
             li Importar
-            li Usar
+            li Utilizar
 
       section
         h3 HTML Imports(3)
@@ -289,67 +290,97 @@ html
       section
         h3 Web Components y Polymer
         pre
-
-
-      section
-        h2 No existen estandares (1)
-        img(src="images/dojo.png" width="200")
-        img(src="images/dojo-example.png" width="500px")
-
-      section
-        h2 No existen estandares (2)
-        img(src="images/angular.png" width="200px")
-        br
-        img(src="images/angular-example.png" width="500px" height="300px")
-        
-      section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
+          code.language-markup.
+            &lt;link rel=&quot;import&quot; href=&quot;polymer.html&quot;&gt;
+            &lt;link rel=&quot;import&quot; href=&quot;paper-tabs.html&quot;&gt;
+            &lt;link rel=&quot;import&quot; href=&quot;paper-tab.html&quot;&gt;
+            &lt;polymer-element name=&quot;menu-bar&quot;&gt;
+              &lt;template&gt;
+                &lt;paper-tabs selected=&quot;0&quot;&gt;
+                  &lt;paper-tab&gt;UNO&lt;/paper-tab&gt;
+                  ...
+                &lt;paper-tabs&gt;                
+              &lt;/template&gt;
 
       section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
-
-      section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
-
-      section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h3 Utilizándolo
         pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
-
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
-
-      section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
+          code.language-markup.
+            &lt;link rel=&quot;import&quot; href=&quot;menu-bar.html&quot;&gt;
+    
+      section
+        h2 Pensando en componentes
 
       section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        h3 Polymer Core Elementos no Visuales
+        h4 Data/Services
+        pre
+          code.language-markup.
+            &lt;core-localstorage&gt;
+            &lt;core-ajax&gt;
 
+      section
+        h3 Polymer Core Elementos no Visuales
+        h4 Input/Selection
+        pre
+          code.language-markup.
+            &lt;core-media-query&gt;
+            &lt;core-collapse&gt;           
+            &lt;core-core-selector&gt;           
+            &lt;core-input&gt;
+
+      section
+        h3 Polymer Paper Elements - Visuales 
+        paper-button(raised) Soy un boton
+          core-icon(icon="favorite" )
+        paper-input(value="Soy un Input")
+        paper-checkbox Enable        
+        paper-slider
+        paper-tabs
+          paper-tab Elemento 1
+          paper-tab Elemento 2
+          paper-tab Elemento 3
+      
+                   
+      section
+        h3 Redefinir nuestro paradigma
+
+      section
+        h4
+          &lt;google-map&gt;&lt;/google-map&gt;
+        br          
+        google-map(style="height: 600px;width:500px")
+
+      section
+        h4 
+          &lt;google-map latitude=&quot;14.61333&quot; longitude=&quot;-90.53528&quot;&gt;&lt;/google-map&gt;
+        google-map(style="height: 600px;width:500px" latitude="14.61333" longitude="-90.53528")
+
+      section
+        pre(width="100px")
+          code.language-markup.
+            &lt;google-map latitude=&quot;37.77493&quot; longitude=&quot;-122.41942&quot; fitToMarkers&gt;
+             &lt;google-map-marker latitude=&quot;37.779&quot; longitude=&quot;-122.3892&quot;
+                draggable=&quot;true&quot; title=&quot;Go Google!&quot;&gt;&lt;/google-map-marker&gt;             
+            &lt;/google-map&gt;
+
+      section
+        google-map(style="height: 600px;width:500px" latitude="37.77493" longitude="-122.41" fitToMarkers)
+          google-map-marker(latitude="37.779" longitude="-122.3892" draggable="true" title="Go Google")
+
+      section
+        ul
+          li Productividad. 
+          li Declarativos. Intuitivos
+          li Bloques de desarrollo
+          li Mantenibilidad. Lee una app y entiende el objetivo.
+          li Reusabilidad. 
+          li Extensibilidad
+          li scoping
+          li Interoperabilidad. DOM regular.
+          li Accesibilidad.
+
+      section
+        img(src="images/google-web-components.png" width="500px")
+      
     script(src='build/build.js')
