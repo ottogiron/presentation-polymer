@@ -12,26 +12,27 @@ html
     link(rel="import" href="bower_components/paper-elements/paper-elements.html")
     link(rel="import" href="bower_components/google-map/google-map.html") 
   body
-
     article
-
       section
-        h3 Únete a la Revolución de Web Components con Polymer        
-
+        img(src="images/polymer-logo.svg" width="250px")  
+        h3 Únete a la Revolución de Web Components con Polymer     
+        div(class="footer")
       section
-        h3 Agenda
+        h2 Agenda
         ul
           li Introducción 
           li ¿Que resuelve Web Components y Polymer?
           li Polymer Demo
 
       section
-        h3 Web Components
+        img(src="images/webcomponents-logo.png") 
+        h2 Web Components
         p Web Components no es el nombre de una tecnologia; es el nombre de un conjunto de tecnologias que permiten al desarrollador resolver una serie de problemas recurrentes en el ambito del desarrollo web.
       
       
-      section 
-        h3 Web Components(2)
+      section
+        img(src="images/webcomponents-logo.png") 
+        h2 Web Components(2)
         ul
           li Custom elements
           li HTML imports
@@ -39,7 +40,8 @@ html
           li Shadow DOM
 
       section
-        h3 Polymer
+        img(src="images/polymer-logo.svg" width="200px")
+        h2 Polymer
         p Polymer es una libreria construida encima de Web Components que define una opinion de como trabajar  con Web Components
         p 
         ul 
@@ -51,21 +53,21 @@ html
         h2 Un poco de historia...
 
       section
-        h3 El primer explorador web
+        h2 El primer explorador web
         p desarrollado en 1990 por el físico Tim Berners Lee en CERN al mismo tiempo que el primer servidor web
         img(src="images/primer-explorador.png" width="500px")
 
       section
-        h3 Lanzamiento del primer sitio web
+        h2 Lanzamiento del primer sitio web
         img(src="images/primer-sitio.png")
 
       section
-        h3 HTML
+        img(src="images/html5-logo.svg" width="200px")       
         p Berners Lee, implementó la primera especificación de HTML que él mismo propuso, como un medio para compartir documentos entre los científicos del CERN
 
       section
-        h3 Bienvenidos JavaScript y CSS
-        p Cuando la WWW inició, las páginas eran solo documentos. Ahora todos sabemos que son mucho más que documentos
+        h2 Bienvenidos JavaScript y CSS
+        p Cuando la web inició, las páginas eran solo documentos. Ahora todos sabemos que son mucho más que documentos
         img(src="images/web-app.png" width="500px")
 
       section        
@@ -76,7 +78,7 @@ html
         img(src="images/gn-style.gif" width="250px")
 
       section
-        img(src="images/css.png" width="200px")
+        img(src="images/css-logo.svg" width="200px")
         p CSS1 fue introducido en 1995
  
       section
@@ -84,15 +86,15 @@ html
         img(src="images/widgets.png" width="300px")
 
       section
-        img(src="images/exito.png" width="500px")
+        img(src="images/success-kid.jpg" width="500px")
 
       section
-        img(src="images/nube.png" width="200px")
-        p Sin embargo, no todo es color de rosa...
+        img(src="images/nube.gif" width="200px")
+        h2 Sin embargo, no todo es color de rosa...
         
         
       section
-       h3 5 Problemas en desarrollo web
+       h2 5 Problemas en desarrollo web
        ul 
         li HTML no es descriptivo
         li Conflictos entre estilos CSS
@@ -106,7 +108,7 @@ html
         h2 ¿Como Web Components y Polymer resuelven estos problemas...?
 
       section 
-        h3 Web Components(2)
+        img(src="images/webcomponents-logo.png")        
         ul
           li Custom elements
           li HTML imports
@@ -114,11 +116,11 @@ html
           li Shadow DOM
 
       section 
-        h3 HTML no es descriptivo
-        img(src="images/gmail.png" width="500px")
+        h2 HTML no es descriptivo
+        img(src="images/gmail.png" width="800px")
 
       section
-        h3 Custom Elements
+        h2 Custom Elements
         paper-tabs(width="500px")
           paper-tab Elemento 1
           paper-tab Elemento 2
@@ -132,9 +134,9 @@ html
             &lt;/paper-tabs&gt;
 
       section
-        h3 Custom Elements(2)
+        h2 Custom Elements(2)
         ul
-          li Declarativos
+          li Declarativos (Codigo no es necesario)
           li HTML expone su proposito
           li Extensible
 
@@ -142,20 +144,20 @@ html
         h2 Definiendo elementos
 
       section
-        h3 Web Components
+        img(src="images/webcomponents-logo.png")
         pre
           code.language-javascript.
             document.registerElement('paper-tabs')
 
       section
-        h3 Polymer
+        img(src="images/polymer-logo.svg" width="250px")
         pre
           code.language-markup.
             &lt;polymer-element name=&quot;paper-tabs&quot;&gt;
              ...
             &lt;/polymer-element&gt;
       section
-       h3 Uso
+       h2 Uso
        pre
         code.language-markup.
           &lt;paper-tabs&gt; ... &lt;/paper-tabs&gt;
@@ -164,7 +166,7 @@ html
         h2 Extendiendo Elementos
 
       section
-        h3 Web Components
+        img(src="images/webcomponents-logo.png")
         pre
           code.language-javascript.
             document.registerElement('super-button', {
@@ -172,20 +174,22 @@ html
                extends: 'button'
             });
 
-      section Polymer
-        code.language-markup.
-          &lt;polymer-element name=&quot;super-button&quot; extends=&quot;button&quot;&gt;
-            .....
-          &lt;/polymer-element&gt;
+      section 
+        img(src="images/polymer-logo.svg" width="250px")
+        pre
+          code.language-markup.
+            &lt;polymer-element name=&quot;super-button&quot; extends=&quot;button&quot;&gt;
+              .....
+            &lt;/polymer-element&gt;
 
       section
-        h3 Uso
+        h2 Uso
         pre
           code.language-markup.
             &lt;button is=&quot;super-button&quot;&gt;&lt;/button&gt;
     
       section
-        h3 Beneficios
+        h2 Beneficios
         ul 
           li Integrado al DOM. Observers, querySelector, addEventListener
           li Interoperabilidad. Todos los frameworks son compatibles con el DOM
@@ -194,11 +198,11 @@ html
 
 
       section
-        h3 Plantillas Nativas Inexistentes
+        h2 Plantillas Nativas Inexistentes
         img(src="images/plantillas-inexistentes.png" width="800px")
 
       section 
-        h3 HTML Templates(2)
+        h2 HTML Templates(2)
         pre
           code.language-markup.
             &lt;template&gt;
@@ -209,7 +213,7 @@ html
             &lt;/template&gt;  
 
       section 
-        h3 HTML Templates(3)
+        h2 HTML Templates(3)
         ul 
           li Propias del DOM
           li Parseadas, no renderizadas.
@@ -222,7 +226,7 @@ html
         h2 Definiendo Templates..
 
       section
-        h3 Web Components
+        img(src="images/webcomponents-logo.png")
         pre
           code.language-markup.
             &lt;template&gt;
@@ -230,7 +234,7 @@ html
             &lt;/template&gt;
 
       section
-        h3 Polymer
+        img(src="images/polymer-logo.svg" width="250px")        
         pre
           code.language-markup.
             &lt;polymer-element name=&quot;user-list&quot;&gt;
@@ -244,25 +248,25 @@ html
             &lt;/polymer-element&gt;    
 
       section 
-        h3 Conflictos de DOM/CSS
+        h2 Conflictos de DOM/CSS
         img(src="images/css-conflicts.png" )
 
 
       section
-        h3 Shadow DOM
+        h2 Shadow DOM
         p DOM/CSS "scoping"(ambito)
 
       section
         h2 Utilizando Shadow DOM
 
       section
-        h3 Web Components
+        img(src="images/webcomponents-logo.png")
         pre
           code.language-javascript.
             var shadow = el.createShadowRoot();//ejemplo un div
             shadow.innerHTML = "&lt;b&gt;Soy una imagen de perfil&lt;/b&gt;"
       section
-        h3 Polymer
+        img(src="images/polymer-logo.svg" width="250px") 
         pre 
           code.language-markup.
             &lt;polymer-element name=&quot;profile-card&quot;&gt;
@@ -276,7 +280,7 @@ html
         img(src="images/languages.png" width="500px")
 
       section
-        h3 HTML Imports
+        h2 HTML Imports
         pre
           code.language-markup.
             &lt;head&gt;
@@ -289,23 +293,17 @@ html
               &lt;/core-toolbar&gt;
               &lt;core-icon-button&gt;
               &lt;/core-icon-button&gt;
-            &lt;/body&gt;
+            &lt;/body&gt; 
 
       section
-        h3 HTML Imports(2)
-          ul 
-            li Buscar.
-            li Importar
-            li Utilizar
-
-      section
-        h3 HTML Imports(3)
+        h2 HTML Imports(3)
         ul 
           li Agrupar JS/HTML/CSS 
           li Manejo de dependencias basico
 
       section
-        h3  Polymer y HTML Imports
+        img(src="images/polymer-logo.svg" width="150px")
+        h2  Polymer y HTML Imports
         pre
           code.language-markup.
             &lt;link rel=&quot;import&quot; href=&quot;polymer.html&quot;&gt;
@@ -320,17 +318,19 @@ html
               &lt;/template&gt;
 
       section
-        h3 Utilizándolo
+        h2 Uso
         pre
           code.language-markup.
             &lt;link rel=&quot;import&quot; href=&quot;menu-bar.html&quot;&gt;
             &lt;menu-bar&gt;&lt;/menu-bar&gt;
     
       section
+        img(src="images/polymer-logo.svg" width="250px")
         h2 ¿Que más ofrece polymer?
 
       section
-        h3 Polymer Core Elements (No visuales)
+        img(src="images/polymer-logo.svg" width="250px")
+        h2 Polymer Core Elements 
         h4 Data/Services
         pre
           code.language-markup.
@@ -338,8 +338,9 @@ html
             &lt;core-ajax&gt;
 
       section
-        h3 Polymer Core Elements (No visuales)
-        h4 Input/Selection
+        img(src="images/polymer-logo.svg" width="250px")
+        h2 Polymer Core Elements 
+        h3 Input/Selection
         pre
           code.language-markup.
             &lt;core-media-query&gt;
@@ -347,8 +348,10 @@ html
             &lt;core-core-selector&gt;           
             &lt;core-input&gt;
 
+
       section
-        h3 Polymer Paper Elements
+        img(src="images/polymer-logo.svg" width="250px")
+        h2 Polymer Paper Elements
         paper-button(raised) Soy un boton
           core-icon(icon="favorite" )
         paper-input(value="Soy un Input")
@@ -359,23 +362,71 @@ html
           paper-tab Elemento 2
           paper-tab Elemento 3
       
-                   
       section
-        h3 Redefinir nuestro paradigma
+        img(src="images/polymer-logo.svg" width="350px")
+        h2 polymer-project.org
 
       section
-        h4
+        h2 Redefinir nuestro paradigma
+
+      section
+        h2 Google tiene 250+ API's
+
+
+      section
+        h2 Codigo para un mapa simple
+        pre
+          code.language-markup.
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;title&gt;Simple Map&lt;/title&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot;&gt;
+                    &lt;meta charset=&quot;utf-8&quot;&gt;
+                    &lt;style&gt;
+                      html, body, #map-canvas {
+                        height: 100%;
+                        margin: 0px;
+                        padding: 0px
+                      }
+                    &lt;/style&gt;
+                    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&quot;&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                      var map;
+                      function initialize() {
+                        var mapOptions = {
+                          zoom: 8,
+                          center: new google.maps.LatLng(-34.397, 150.644)
+                        };
+                        map = new google.maps.Map(document.getElementById(&#39;map-canvas&#39;),
+                            mapOptions);
+                      }
+
+                      google.maps.event.addDomListener(window, &#39;load&#39;, initialize);
+
+                    &lt;/script&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div id=&quot;map-canvas&quot;&gt;&lt;/div&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+      section
+        h2
+          &lt;google-map&gt;&lt;/google-map&gt;
+
+      section
+        h3
           &lt;google-map&gt;&lt;/google-map&gt;
         br          
         google-map(style="height: 600px;width:500px")
 
       section
-        h4 
+        h3 
           &lt;google-map latitude=&quot;14.61333&quot; longitude=&quot;-90.53528&quot;&gt;&lt;/google-map&gt;
         google-map(style="height: 600px;width:500px" latitude="14.61333" longitude="-90.53528")
 
       section
-        pre(width="100px")
+        pre
           code.language-markup.
             &lt;google-map latitude=&quot;37.77493&quot; longitude=&quot;-122.41942&quot; fitToMarkers&gt;
              &lt;google-map-marker latitude=&quot;37.779&quot; longitude=&quot;-122.3892&quot;
@@ -385,8 +436,12 @@ html
       section
         google-map(style="height: 600px;width:500px" latitude="37.77493" longitude="-122.41" fitToMarkers)
           google-map-marker(latitude="37.779" longitude="-122.3892" draggable="true" title="Go Google")
+          google-map-marker(latitude="40.7127837" longitude="-74.00594130000002" draggable="true" title="Go Google")
+      section
+        img(src="images/google-web-components.png" width="500px")
 
       section
+        h2 Beneficios
         ul
           li Productividad. 
           li Declarativos. Intuitivos
@@ -394,11 +449,25 @@ html
           li Mantenibilidad. Lee una app y entiende el objetivo.
           li Reusabilidad. 
           li Extensibilidad
-          li scoping
+          li Scoping/Ambito
           li Interoperabilidad. DOM regular.
           li Accesibilidad.
 
-      section
-        img(src="images/google-web-components.png" width="500px")
       
+      section
+        img(src="images/demo-time.png")
+
+      section
+        h2 Pre requisitos
+        img(src="images/node-logo.svg" width="200px")        
+        img(src="images/bower-logo.png" width="200px")
+        h2 Bower
+
+      section
+        h1 Gracias!!!
+        p twitter: @hottroth
+        p ottogiron.me
+        p guatemalajs.org
+
+
     script(src='build/build.js')
